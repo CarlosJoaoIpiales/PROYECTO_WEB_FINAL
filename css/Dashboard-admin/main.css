@@ -1,0 +1,167 @@
+:root {
+    --head-color: #388E3C;
+    --cards-color: #4CAF50;
+}
+
+.contenido{
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+
+}
+
+.top-bar{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: var(--head-color);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.top-bar p{
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.cards{
+    margin-top: 70px;
+    width: 100%;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.cards .card{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 black;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--cards-color);
+}
+
+.number{
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+}
+
+.card-name{
+    color: black;
+    font-weight: 600;
+}
+
+.icon-box i{
+    font-size: 45px;
+    color: black;
+}
+
+.tables{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    align-items: self-start;
+}
+
+.last-ingredients,
+.user-visiting{
+    min-height: 350px;
+    color: var(--head-color);
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #444;
+}
+
+.btn{
+    padding: 5px 10px;
+    background: var(--cards-color);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+table{
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead td{
+    font-weight: 600;
+    color: black;
+}
+
+tbody tr:hover{
+    background: #444;
+    color: white;
+}
+
+table tbody tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+table tr:last-child{
+    border-bottom: none;
+}
+
+td{
+    padding: 9px 5px;
+}
+
+.last-ingredients table tbody td:last-child{
+    white-space: nowrap;
+}
+
+td i{
+    padding: 7px;
+    color: white;
+    border-radius: 50px;
+}
+
+.fa-eye{
+    background: var(--cards-color);
+}
+
+.fa-edit{
+    background: var(--cards-color);
+}
+
+.fa-trash-alt{
+    background: var(--cards-color);
+}
+
+@media(max-width:860px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tables{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:530px){
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    .last-ingredients td:nth-child(3){
+        display: none;
+    }
+}
